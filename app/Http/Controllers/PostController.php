@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = auth()->user()->posts()->latest()->get();
+        $posts = Post::latest()->paginate(10);
         return view('posts.index', compact('posts'));
     }
 
@@ -20,40 +20,48 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string'
+        $data = $request->validate([
+            'title'      => 'required|string|max:255',
+            'excerpt'    => 'nullable|string|max:500',
+            'body'       => 'required|string',
+            'image_url'  => 'nullable|url',
         ]);
 
-        auth()->user()->posts()->create($validated);
+        Post::create($data);
 
-        return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+        return redirect()->route('posts.index')
+                            ->with('success', 'Post created.');
+    }
+
+    public function show(Post $post)
+    {
+        return view('posts.show', compact('post'));
     }
 
     public function edit(Post $post)
     {
-        $this->authorize('update', $post);
         return view('posts.edit', compact('post'));
     }
 
     public function update(Request $request, Post $post)
     {
-        $this->authorize('update', $post);
-
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string'
+        $data = $request->validate([
+            'title'      => 'required|string|max:255',
+            'excerpt'    => 'nullable|string|max:500',
+            'body'       => 'required|string',
+            'image_url'  => 'nullable|url',
         ]);
 
-        $post->update($validated);
+        $post->update($data);
 
-        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+        return redirect()->route('posts.show', $post)
+                            ->with('success', 'Post updated.');
     }
 
     public function destroy(Post $post)
     {
-        $this->authorize('delete', $post);
         $post->delete();
-        return redirect()->route('posts.index')->with('success', 'Post deleted successfully!');
+        return redirect()->route('posts.index')
+                            ->with('success', 'Post deleted.');
     }
 }
