@@ -18,6 +18,7 @@
                     <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.*')">
                         {{ __('Posts') }}
                     </x-nav-link>
+                    <a href="{{ route('welcome') }}">Homepage</a>   
                     @endauth
                 </div>
             </div>
