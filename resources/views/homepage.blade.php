@@ -36,7 +36,7 @@
                 </p>
                 <h3 class="text-xl font-bold mb-2">{{ \Illuminate\Support\Str::limit($post->title, 50) }}</h3>
                 <p class="text-gray-700">{{ \Illuminate\Support\Str::limit($post->excerpt ?? $post->body, 100) }}</p>
-                <a href="{{ route('posts.ReadMore', $post) }}"
+                <a href="{{ route('posts.readmore', $post) }}"
                    class="text-orange-500 inline-block mt-4">Read More →</a>
               </div>
             </div>
