@@ -9,22 +9,7 @@ class Post extends Model
 {
     use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<string>
-     */
     protected $fillable = [
-        'title',
-        'content',
-        // user_id is automatically handled by the relationship
+        'title', 'excerpt', 'body', 'image_url',
     ];
-
-    /**
-     * Get the user that owns the post.
-     */
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }
