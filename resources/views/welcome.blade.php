@@ -33,38 +33,7 @@
             </div>
         </section>
 
-        <!-- Featured Recipes Section -->
-        <section id="recipes" class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Recipes</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Recipe Card Example -->
-                    <div class="bg-gray-100 rounded overflow-hidden shadow-lg">
-                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?pasta" alt="Spaghetti Carbonara">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Spaghetti Carbonara</h3>
-                            <p class="text-gray-700 text-base">A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-100 rounded overflow-hidden shadow-lg">
-                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?avocado-toast" alt="Avocado Toast">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Avocado Toast</h3>
-                            <p class="text-gray-700 text-base">A healthy and delicious start to your morning topped with avocado and sprouts.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-gray-100 rounded overflow-hidden shadow-lg">
-                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?salad" alt="Quinoa Salad">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Quinoa Salad</h3>
-                            <p class="text-gray-700 text-base">A nutritious bowl of quinoa mixed with fresh vegetables and herbs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- Blog Section -->
         <section id="blog" class="py-16 bg-gray-50">
@@ -72,24 +41,36 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Latest from the Blog</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Blog Post Preview -->
-                    <div class="bg-white rounded overflow-hidden shadow">
+                    <div class="bg-white rounded overflow-hidden shadow hover:shadow-lg transition">
                         <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?baking" alt="Baking Tips">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">5 Tips for Perfect Baking</h3>
+                            <p class="text-sm text-gray-500 mb-1">March 15, 2025 • <span class="text-orange-500">Baking</span></p>
+                            <h3 class="text-xl font-bold mb-2 hover:text-orange-500 cursor-pointer">5 Tips for Perfect Baking</h3>
                             <p class="text-gray-700">Discover the secrets to baking like a pro with our top tips and recipes.</p>
-                            <a href="#" class="text-orange-500 inline-block mt-4">Read More</a>
+                            <a href="#" class="text-orange-500 inline-block mt-4">Read More →</a>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded overflow-hidden shadow">
-                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?sauce" alt="Mastering Sauces">
+                    <div class="bg-white rounded overflow-hidden shadow hover:shadow-lg transition">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?baking" alt="Baking Tips">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">How to Master Sauces</h3>
-                            <p class="text-gray-700">Learn the techniques to create delicious and versatile sauces for any dish.</p>
-                            <a href="#" class="text-orange-500 inline-block mt-4">Read More</a>
+                            <p class="text-sm text-gray-500 mb-1">March 15, 2025 • <span class="text-orange-500">Baking</span></p>
+                            <h3 class="text-xl font-bold mb-2 hover:text-orange-500 cursor-pointer">5 Tips for Perfect Baking</h3>
+                            <p class="text-gray-700">Discover the secrets to baking like a pro with our top tips and recipes.</p>
+                            <a href="#" class="text-orange-500 inline-block mt-4">Read More →</a>
                         </div>
                     </div>
-                </div>
+
+                    <div class="bg-white rounded overflow-hidden shadow hover:shadow-lg transition">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?baking" alt="Baking Tips">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-1">March 15, 2025 • <span class="text-orange-500">Baking</span></p>
+                            <h3 class="text-xl font-bold mb-2 hover:text-orange-500 cursor-pointer">5 Tips for Perfect Baking</h3>
+                            <p class="text-gray-700">Discover the secrets to baking like a pro with our top tips and recipes.</p>
+                            <a href="#" class="text-orange-500 inline-block mt-4">Read More →</a>
+                        </div>
+                    </div>
+                                    </div>
             </div>
         </section>
 
