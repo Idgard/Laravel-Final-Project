@@ -8,6 +8,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomepageController::class, 'index'])
     ->name('homepage');
 
+Route::get('/about', function () {
+        return view('about');
+    })->name('about');
+    
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
