@@ -16,6 +16,12 @@
                         <li><a href="#home" class="text-gray-700 hover:text-orange-500">Home</a></li>
                         <li><a href="#blog" class="text-gray-700 hover:text-orange-500">Blog</a></li>
                         <li><a href="#about" class="text-gray-700 hover:text-orange-500">About</a></li>
+                        @auth
+                            <li><a href="{{ route('dashboard') }}" class="text-gray-700 hover:text-orange-500">Dashboard</a></li>
+                        @else
+                            <li><a href="{{ route('login') }}" class="text-gray-700 hover:text-orange-500">Login</a></li>
+                            <li><a href="{{ route('register') }}" class="text-gray-700 hover:text-orange-500">Register</a></li>
+                        @endauth
                     </ul>
                 </nav>
             </div>
@@ -70,7 +76,17 @@
                             <a href="#" class="text-orange-500 inline-block mt-4">Read More →</a>
                         </div>
                     </div>
-                                    </div>
+
+                    <div class="bg-white rounded overflow-hidden shadow hover:shadow-lg transition">
+                        <img class="w-full h-48 object-cover" src="https://source.unsplash.com/featured/?baking" alt="Baking Tips">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-1">March 15, 2025 • <span class="text-orange-500">Baking</span></p>
+                            <h3 class="text-xl font-bold mb-2 hover:text-orange-500 cursor-pointer">5 Tips for Perfect Baking</h3>
+                            <p class="text-gray-700">Discover the secrets to baking like a pro with our top tips and recipes.</p>
+                            <a href="#" class="text-orange-500 inline-block mt-4">Read More →</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
