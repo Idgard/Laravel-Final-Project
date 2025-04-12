@@ -1,41 +1,42 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us – Delicious Bites</title>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body class="bg-gray-50">
+  @include('partials.header')
 
-@section('content')
-    <main class="py-16 bg-gray-50 text-gray-800">
-        <div class="max-w-5xl mx-auto px-4">
-            <h1 class="text-4xl font-bold text-center text-orange-500 mb-6">About Us</h1>
-            <p class="text-lg text-center mb-12 max-w-3xl mx-auto">
-                Welcome to <span class="font-semibold text-orange-500">Delicious Bites</span> – your ultimate online destination for everything tasty and homemade. Our mission is simple: to share delicious, easy-to-make recipes that inspire you to cook more and savor every bite.
-            </p>
-
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <img src="https://source.unsplash.com/featured/?food,chef" alt="Cooking Team" class="rounded-lg shadow-md">
-                <div>
-                    <h2 class="text-2xl font-bold mb-4">Our Story</h2>
-                    <p class="mb-4">
-                        What started as a personal recipe journal has grown into a vibrant community of food lovers from around the world. At Delicious Bites, we believe food brings people together. Every dish has a story, and we’re here to tell it.
-                    </p>
-                    <p>
-                        From family traditions to new flavor explorations, we’re passionate about sharing meals that are not only mouth-watering but meaningful. Whether you're a beginner in the kitchen or a seasoned home cook, we’re excited to cook with you!
-                    </p>
-                </div>
-            </div>
-
-            <div class="mt-16">
-                <h2 class="text-2xl font-bold mb-4 text-center">What We Offer</h2>
-                <ul class="list-disc list-inside space-y-2 max-w-xl mx-auto text-lg">
-                    <li>Step-by-step recipes for everyday meals</li>
-                    <li>Tips and tricks for better cooking and baking</li>
-                    <li>Seasonal and holiday-inspired menus</li>
-                    <li>Ingredient guides and food pairings</li>
-                    <li>Interactive blog posts and community discussions</li>
-                </ul>
-            </div>
-
-            <div class="mt-16 text-center">
-                <h2 class="text-2xl font-bold mb-4">Let’s Stay Connected</h2>
-                <p class="mb-4 text-lg">We love hearing from you! Whether it's a question, suggestion, or your own kitchen success story, don’t hesitate to reach out.</p>
-            </div>
+  <main>
+    {{-- Hero Section --}}
+    <section class="relative bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?kitchen,team')">
+      <div class="bg-black bg-opacity-60">
+        <div class="max-w-7xl mx-auto px-4 py-32 text-center text-white">
+          <h1 class="text-5xl font-bold">Meet the Team Behind Delicious Bites</h1>
+          <p class="mt-4 text-xl">Sharing the joy of cooking, one recipe at a time.</p>
         </div>
-    </main>
-@endsection
+      </div>
+    </section>
+
+    {{-- About Content --}}
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-orange-500 mb-6 text-center">Our Story</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Delicious Bites started with a passion for food and storytelling. From home-cooked meals to international flavors, we aim to bring a bit of everything to your table. Whether you're a seasoned chef or just starting your cooking journey, our blog offers something for everyone.
+        </p>
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          Our team is made up of foodies, photographers, and culinary adventurers who love to share recipes, restaurant finds, and cooking tips. We believe that food connects people — and we're here to help you savor every bite.
+        </p>
+        <div class="text-center">
+          <a href="{{ route('homepage') }}" class="inline-block mt-6 bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600">Explore Our Blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials.footer')
+</body>
+</html>

@@ -4,8 +4,8 @@
       <a href="{{ route('homepage') }}" class="text-2xl font-bold text-orange-500">Delicious Bites</a>
       <nav class="hidden md:block">
         <ul class="flex space-x-8">
-          <li><a href="#home" class="text-gray-700 hover:text-orange-500">Home</a></li>
-          <li><a href="#blog" class="text-gray-700 hover:text-orange-500">Blog</a></li>
+          <li><a href="{{ route('homepage') }}" class="text-gray-700 hover:text-orange-500">Home</a></li>
+          <li><a href="{{ route('blogs') }}" class="text-gray-700 hover:text-orange-500">Blog</a></li>
           <li><a href="{{ route('about') }}" class="text-gray-700 hover:text-orange-500">About</a></li>
           @auth
             <li><a href="{{ route('dashboard') }}" class="text-gray-700 hover:text-orange-500">Dashboard</a></li>
