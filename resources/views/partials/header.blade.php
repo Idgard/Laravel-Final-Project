@@ -9,6 +9,14 @@
           <li><a href="#about" class="text-gray-700 hover:text-orange-500">About</a></li>
           @auth
             <li><a href="{{ route('dashboard') }}" class="text-gray-700 hover:text-orange-500">Dashboard</a></li>
+            <li>
+              <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <button type="submit" class="text-gray-700 hover:text-orange-500 focus:outline-none">
+                      Logout
+                  </button>
+              </form>
+          </li>
           @else
             <li><a href="{{ route('login') }}" class="text-gray-700 hover:text-orange-500">Login</a></li>
             <li><a href="{{ route('register') }}" class="text-gray-700 hover:text-orange-500">Register</a></li>
