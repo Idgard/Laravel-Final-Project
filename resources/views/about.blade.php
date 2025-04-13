@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us – Delicious Bites</title>
+  <title>About Us – The Daily Crave</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50">
@@ -14,7 +14,7 @@
     <section class="relative bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?kitchen,team')">
       <div class="bg-black bg-opacity-60">
         <div class="max-w-7xl mx-auto px-4 py-32 text-center text-white">
-          <h1 class="text-5xl font-bold">Meet the Team Behind Delicious Bites</h1>
+          <h1 class="text-5xl font-bold">Meet the Team Behind The Daily Crave</h1>
           <p class="mt-4 text-xl">Sharing the joy of cooking, one recipe at a time.</p>
         </div>
       </div>

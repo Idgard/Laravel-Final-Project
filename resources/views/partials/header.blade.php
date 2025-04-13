@@ -1,7 +1,7 @@
 <header class="bg-white shadow">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-6">
-      <a href="{{ route('homepage') }}" class="text-2xl font-bold text-orange-500">Delicious Bites</a>
+      <a href="{{ route('homepage') }}" class="text-2xl font-bold text-orange-500">The Daily Crave</a>
       <nav class="hidden md:block">
         <ul class="flex space-x-8">
           <li><a href="{{ route('homepage') }}" class="text-gray-700 hover:text-orange-500">Home</a></li>

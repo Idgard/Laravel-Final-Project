@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Delicious Bites – Food Blog</title>
+  <title>The Daily Crave – Food Blog</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50">
@@ -14,7 +14,7 @@
     <section id="home" class="relative bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?food')">
       <div class="bg-black bg-opacity-50">
         <div class="max-w-7xl mx-auto px-4 py-32 text-center text-white">
-          <h1 class="text-6xl font-bold">Welcome to Delicious Bites</h1>
+          <h1 class="text-6xl font-bold">Welcome to The Daily Crave</h1>
           <p class="mt-4 text-xl">Indulge in mouth‑watering recipes and culinary adventures</p>
           <a href="#blog" class="mt-8 inline-block bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Latest Blogs</a>
         </div>
