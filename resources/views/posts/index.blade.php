@@ -8,8 +8,15 @@
   <div class="mt-6 space-y-4">
     @foreach($posts as $post)
       <div class="p-4 bg-white rounded shadow">
-        <a href="{{ route('posts.show', $post) }}" class="text-xl font-semibold">{{ $post->title }}</a>
-        <p class="text-gray-600 text-sm">{{ $post->created_at->diffForHumans() }}</p>
+        <div class="flex justify-between items-center">
+          <div>
+            <a href="{{ route('posts.show', $post) }}" class="text-xl font-semibold">{{ $post->title }}</a>
+            <p class="text-gray-600 text-sm">{{ $post->created_at->diffForHumans() }}</p>
+          </div>
+          <div>
+            <a href="{{ route('posts.edit', $post) }}" class="bg-blue-500 text-white px-3 py-1 rounded text-sm">Edit</a>
+          </div>
+        </div>
       </div>
     @endforeach
   </div>
