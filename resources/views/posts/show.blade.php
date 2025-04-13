@@ -10,13 +10,22 @@
   <div class="prose lg:prose-xl">
     {!! nl2br(e($post->body)) !!}
   </div>
+  
+  @auth
   <div class="mt-8 flex space-x-4">
-    <a href="{{ route('posts.edit', $post) }}" class="bg-blue-500 text-white px-4 py-2 rounded">Edit</a>
+    <a href="{{ route('posts.edit', $post) }}" 
+       class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+      Edit
+    </a>
     <form action="{{ route('posts.destroy', $post) }}" method="POST">
-      @csrf @method('DELETE')
-      <button class="bg-red-500 text-white px-4 py-2 rounded"
-              onclick="return confirm('Delete this post?')">Delete</button>
+      @csrf 
+      @method('DELETE')
+      <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+              onclick="return confirm('Delete this post?')">
+        Delete
+      </button>
     </form>
   </div>
+  @endauth
 </div>
 @endsection
