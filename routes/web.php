@@ -32,6 +32,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // Posts create/edit/delete/show routes for authenticated users
     // Specific routes first
+
     Route::get('posts/create', [PostController::class, 'create'])
          ->name('posts.create');
     Route::post('posts', [PostController::class, 'store'])

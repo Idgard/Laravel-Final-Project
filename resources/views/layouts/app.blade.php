@@ -28,6 +28,8 @@
             @endisset
 
             <!-- Page Content -->
+
+             <!--  i also plan a feature where users can create and join to a group  -->
             <main>
                 @yield('content')
             </main>

@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Str;
 
-return [
+// Parse Heroku DATABASE_URL environment variable if present
+$DATABASE_URL = parse_url(env('DATABASE_URL', ''));
 
+return [
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -16,7 +18,8 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    // Use postgres if DATABASE_URL is set (Heroku), otherwise use mysql (local)
+    'default' => env('DATABASE_URL') ? 'pgsql_heroku' : env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -94,6 +97,21 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
+            'sslmode' => 'prefer',
+        ],
+        
+        // New connection specifically for Heroku
+        'pgsql_heroku' => [
+            'driver' => 'pgsql',
+            'host' => isset($DATABASE_URL['host']) ? $DATABASE_URL['host'] : env('DB_HOST', '127.0.0.1'),
+            'port' => isset($DATABASE_URL['port']) ? $DATABASE_URL['port'] : env('DB_PORT', '5432'),
+            'database' => isset($DATABASE_URL['path']) ? ltrim($DATABASE_URL['path'], '/') : env('DB_DATABASE', 'laravel'),
+            'username' => isset($DATABASE_URL['user']) ? $DATABASE_URL['user'] : env('DB_USERNAME', 'root'),
+            'password' => isset($DATABASE_URL['pass']) ? $DATABASE_URL['pass'] : env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'public',
             'sslmode' => 'prefer',
         ],
 
