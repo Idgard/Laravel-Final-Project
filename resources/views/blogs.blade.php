@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>All Blogs – Delicious Bites</title>
+  <title>All Blogs – The Daily Crave</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-50">
@@ -14,7 +14,7 @@
     <section class="bg-orange-100 py-20 text-center">
       <div class="max-w-4xl mx-auto px-4">
         <h1 class="text-5xl font-bold text-gray-800">All Blog Posts</h1>
-        <p class="mt-4 text-lg text-gray-600">Explore our delicious content below</p>
+        <p class="mt-4 text-lg text-gray-600">Explore our craving content below</p>
       </div>
     </section>
 

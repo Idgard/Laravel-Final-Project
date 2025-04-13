@@ -25,7 +25,7 @@
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-orange-500 mb-6 text-center">Our Story</h2>
         <p class="text-lg text-gray-700 leading-relaxed mb-6">
-          Delicious Bites started with a passion for food and storytelling. From home-cooked meals to international flavors, we aim to bring a bit of everything to your table. Whether you're a seasoned chef or just starting your cooking journey, our blog offers something for everyone.
+        The Daily Crave started with a passion for food and storytelling. From home-cooked meals to international flavors, we aim to bring a bit of everything to your table. Whether you're a seasoned chef or just starting your cooking journey, our blog offers something for everyone.
         </p>
         <p class="text-lg text-gray-700 leading-relaxed mb-6">
           Our team is made up of foodies, photographers, and culinary adventurers who love to share recipes, restaurant finds, and cooking tips. We believe that food connects people — and we're here to help you savor every bite.
