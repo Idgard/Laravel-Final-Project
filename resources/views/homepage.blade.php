@@ -11,7 +11,7 @@
 
   <main>
     {{-- Hero --}}
-    <section id="home" class="relative bg-cover bg-center" style="background-image:url('https://source.unsplash.com/1600x900/?food')">
+    <section id="home" class="relative bg-cover bg-center" style="background-image:url('https://www.vacationhive.com/images/hives/24/24-baguio-main-banner2022.jpg')">
       <div class="bg-black bg-opacity-50">
         <div class="max-w-7xl mx-auto px-4 py-32 text-center text-white">
           <h1 class="text-6xl font-bold">Welcome to The Daily Crave</h1>
