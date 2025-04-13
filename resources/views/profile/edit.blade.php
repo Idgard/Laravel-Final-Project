@@ -35,6 +35,12 @@
             <div class="bg-white p-6 shadow sm:rounded-lg">
                 <h2 class="text-lg font-medium text-gray-900 mb-4">Update Password</h2>
 
+                @if (session('status') === 'password-updated')
+                    <div class="mb-4 text-sm text-green-600">
+                        Password updated successfully.
+                    </div>
+                @endif
+
                 <form method="POST" action="{{ route('password.update') }}" class="space-y-4">
                     @csrf
                     @method('PUT')
@@ -43,18 +49,27 @@
                         <label for="current_password" class="block text-sm font-medium text-gray-700">Current Password</label>
                         <input id="current_password" name="current_password" type="password" autocomplete="current-password"
                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('updatePassword.current_password')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div>
                         <label for="password" class="block text-sm font-medium text-gray-700">New Password</label>
                         <input id="password" name="password" type="password" autocomplete="new-password"
                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('updatePassword.password')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div>
                         <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirm Password</label>
                         <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password"
                                class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500">
+                        @error('updatePassword.password_confirmation')
+                            <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div class="flex items-center justify-end">
