@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Laravel-Final-Project
+    env: php
+    buildCommand: |
+      composer install --no-dev
+      php artisan key:generate
+      
+    startCommand: php artisan serve --host 0.0.0.0 --port 10000
+    plan: free
